@@ -1,0 +1,87 @@
+{
+  "name": "Midnight Cyan Supply Chain Theme",
+  "dataColors": [
+    "#18B8C8",
+    "#57D9A3",
+    "#3B82F6",
+    "#93C5FD",
+    "#0EA5E9",
+    "#F43F5E",
+    "#F59E0B",
+    "#A855F7"
+  ],
+  "background": "#0F1C2E",
+  "foreground": "#FFFFFF",
+  "tableAccent": "#18B8C8",
+  "textClasses": {
+    "callout": {
+      "fontSize": 22,
+      "fontFace": "Segoe UI Bold",
+      "color": "#FFFFFF"
+    },
+    "title": {
+      "fontSize": 11,
+      "fontFace": "Segoe UI Semibold",
+      "color": "#F8FAFC"
+    },
+    "header": {
+      "fontSize": 10,
+      "fontFace": "Segoe UI Semibold",
+      "color": "#E2E8F0"
+    },
+    "label": {
+      "fontSize": 9,
+      "fontFace": "Segoe UI",
+      "color": "#CBD5E1"
+    }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [
+          {
+            "show": true,
+            "color": { "solid": { "color": "#192A42" } },
+            "transparency": 0
+          }
+        ],
+        "visualHeader": [
+          {
+            "background": { "solid": { "color": "#192A42" } },
+            "foreground": { "solid": { "color": "#FFFFFF" } }
+          }
+        ],
+        "border": [
+          {
+            "show": true,
+            "color": { "solid": { "color": "#263B59" } },
+            "radius": 10
+          }
+        ],
+        "dropShadow": [
+          {
+            "show": true,
+            "color": { "solid": { "color": "#060D17" } },
+            "position": "Outer",
+            "preset": "BottomRight"
+          }
+        ]
+      }
+    },
+    "page": {
+      "*": {
+        "background": [
+          {
+            "color": { "solid": { "color": "#0F1C2E" } },
+            "transparency": 0
+          }
+        ],
+        "outspace": [
+          {
+            "color": { "solid": { "color": "#0A1320" } }
+          }
+        ]
+      }
+    }
+  }
+}
