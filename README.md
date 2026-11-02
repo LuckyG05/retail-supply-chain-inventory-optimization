@@ -20,7 +20,7 @@ However, behind the top-line growth, the Operations and Finance teams were facin
 
 ---
 
-## Why Excel + MySQL + Power BI? (Real-World Architecture)
+## Why Excel + MySQL + Power BI? 
 
 A common mistake is using a single tool for everything—or worse, running heavy lookup formulas directly on a **96 MB, 180,519-row, 53-column CSV** in Excel, which freezes the application.
 
@@ -35,7 +35,7 @@ Instead, I designed a realistic corporate workflow where each tool does what it 
 
 ### 1. Data Profiling & PII Removal (Power Query)
 The raw dataset arrived with **53 columns**. Using Power Query's *Column Quality* and *Column Distribution* profiling (loaded via `Only Create Connection -> Data Model` to keep Excel fast), I audited and eliminated:
-* **100% Empty / Zero-Variance Columns:** Dropped 'Product Description' (100% null), `Order Zipcode` (86% null), and `Product Status` (single constant value `0`).
+* **100% Empty / Zero-Variance Columns:** Dropped `Product Description` (100% null), `Order Zipcode` (86% null), and `Product Status` (single constant value `0`).
 * **Sensitive PII Data:** Removed `Customer Password`, `Customer Email`, and `Street Address` for governance compliance.
 * **Redundant Columns:** Verified and dropped duplicate fields (`Benefit per order` duplicating `Order Profit Per Order`, and `Sales per customer` duplicating `Order Item Total`).
 
@@ -75,7 +75,7 @@ Using MySQL's high-speed `LOAD DATA INFILE`, I ingested all **180,519 records** 
 * `vw_dim_products` (118 SKUs, Categories, Departments, Unit Prices)
 * `vw_fact_orders` (Order lines, parsed `STR_TO_DATE` timestamps, `delay_days`, `is_on_time` flags, and financials)
 
-### Featured SQL Highlights (From [`DataCo_SupplyChain_Analytics.sql`](03_SQL_Scripts/DataCo_SupplyChain_Analytics.sql))
+### Featured SQL Highlights 
 
 #### 1. Diagnosing the Shipping Mode Paradox (`CASE WHEN` & Aggregations)
 ```sql
